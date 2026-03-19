@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
       
       {/* LEFT */}
       <div className="nav-left">
-        <h2 className="brand">BudJabar</h2>
+        <h2 className="brand">BudayaJabar</h2>
       </div>
 
       {/* CENTER */}
@@ -53,6 +53,19 @@ const Navbar: React.FC = () => {
               <NavLink to="/kuliner">Kuliner</NavLink>
               <NavLink to="/event">Event</NavLink>
               <NavLink to="/berita">Berita</NavLink>
+            </div>
+          </li>
+
+          <li className="dropdown">
+            Game
+            <span className="arrow">▾</span>
+
+            <div className="dropdown-menu">
+              <NavLink to="/alatmusik">Alat Musik</NavLink>
+              <NavLink to="/aksara">Aksara</NavLink>
+              {/* <NavLink to="/kuliner">Kuliner</NavLink>
+              <NavLink to="/event">Event</NavLink>
+              <NavLink to="/berita">Berita</NavLink> */}
             </div>
           </li>
 

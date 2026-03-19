@@ -1,0 +1,129 @@
+.angklung {
+  margin-top: 80px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0d2740, #050d14);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.angklung-container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* HEADER */
+.angklung-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.angklung-header h1 {
+  font-size: 36px;
+}
+
+.score {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #d4af37;
+}
+
+/* 🔥 LAYOUT */
+.angklung-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT */
+.angklung-left {
+  flex: 1;
+}
+
+/* RIGHT PANEL */
+.angklung-right {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* SONG BUTTON */
+.song-select {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.song-select button {
+  padding: 8px 14px;
+  border: none;
+  background: #d4af37;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* LYRICS */
+.lyrics p {
+  font-size: 15px;
+  opacity: 0.6;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.lyrics p span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.lyrics p.active {
+  color: #d4af37;
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* ANGKLUNG */
+.angklung-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bar {
+  width: 70px;
+  background: linear-gradient(180deg, #d4af37, #8c6a2b);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ACTIVE */
+.bar.active {
+  transform: translateY(-15px);
+  box-shadow: 0 0 25px #d4af37;
+}
+
+/* GUIDE */
+.bar.guide {
+  box-shadow: 0 0 25px #00eaff;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .angklung-layout {
+    flex-direction: column;
+  }
+}

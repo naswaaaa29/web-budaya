@@ -9,6 +9,9 @@ import Kuliner from "./components/eksplorasi/Kuliner";
 import Event from "./components/eksplorasi/Event";
 import Berita from "./components/eksplorasi/Berita";
 
+import Angklung from "./components/game/Angklung";
+import Aksara from "./components/game/Aksara";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const HomePage: React.FC = () => {
@@ -33,6 +36,9 @@ const App: React.FC = () => {
         <Route path="/kuliner" element={<Kuliner />} />
         <Route path="/event" element={<Event />} />
         <Route path="/berita" element={<Berita />} />
+
+        <Route path="/alatmusik" element={<Angklung />} />
+        <Route path="/aksara" element={<Aksara />} />
       </Routes>
 
       <Footer />

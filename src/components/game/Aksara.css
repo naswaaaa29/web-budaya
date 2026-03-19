@@ -1,0 +1,94 @@
+/* WRAPPER */
+.aksara {
+  margin-top: 80px;
+  min-height: 100vh;
+  background: radial-gradient(circle, #0d2740, #050d14);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.aksara-container {
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* LAYOUT */
+.aksara-layout {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* CARDS */
+.aksara-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aksara-card {
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.aksara-card.active {
+  background: #d4af37;
+  color: black;
+}
+
+/* CANVAS */
+.aksara-canvas-section {
+  flex: 1;
+}
+
+.aksara-canvas-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.aksara-canvas-wrapper canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* SVG GUIDE */
+.aksara-guide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* BUTTON */
+.aksara-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.aksara-actions button {
+  padding: 8px 15px;
+  border: none;
+  background: #d4af37;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* SCORE */
+.aksara-score-box {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #d4af37;
+}
