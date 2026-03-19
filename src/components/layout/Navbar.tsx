@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
@@ -29,21 +30,32 @@ const Navbar: React.FC = () => {
       {/* RIGHT */}
       <div className="nav-right">
         <ul className="nav-links">
-          <li className="active">Beranda</li>
-          <li>Peta</li>
+
+          <li>
+            <NavLink to="/" end>
+              Beranda
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/peta">
+              Peta
+            </NavLink>
+          </li>
 
           <li className="dropdown">
             Eksplorasi
             <span className="arrow">▾</span>
 
             <div className="dropdown-menu">
-              <p>Sejarah</p>
-              <p>Wisata</p>
-              <p>Kuliner</p>
-              <p>Event</p>
-              <p>Berita</p>
+              <NavLink to="/sejarah">Sejarah</NavLink>
+              <NavLink to="/wisata">Wisata</NavLink>
+              <NavLink to="/kuliner">Kuliner</NavLink>
+              <NavLink to="/event">Event</NavLink>
+              <NavLink to="/berita">Berita</NavLink>
             </div>
           </li>
+
         </ul>
       </div>
 

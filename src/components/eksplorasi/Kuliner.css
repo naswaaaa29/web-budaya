@@ -1,0 +1,102 @@
+.kuliner {
+  margin-top: 80px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0b1d2a, #0d2740);
+  color: white;
+  padding: 60px;
+}
+
+.kuliner-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.kuliner h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.kuliner p {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* LIST */
+.kuliner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.kuliner-card {
+  display: flex;
+  gap: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.kuliner-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.kuliner-image {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* CONTENT */
+.kuliner-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.kuliner-content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kuliner-content h3 {
+  margin: 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f5d97a;
+}
+
+.location {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 5px 0;
+}
+
+.category {
+  font-size: 12px;
+  background: rgba(212, 175, 55, 0.2);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .kuliner-card {
+    flex-direction: column;
+  }
+
+  .kuliner-image {
+    width: 100%;
+    height: 200px;
+  }
+}

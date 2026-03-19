@@ -85,6 +85,25 @@
   gap: 40px;
 }
 
+/* LINK BASE */
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* 🔥 ACTIVE (SATU-SATUNYA SUMBER GARIS) */
+.nav-links a.active {
+  opacity: 1;
+}
+
 .nav-links li {
   font-size: 14px;
   letter-spacing: 1px;
@@ -175,6 +194,23 @@
   pointer-events: none;
 
   transition: all 0.25s ease;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  opacity: 0.85;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(212, 175, 55, 0.15);
+  transform: translateX(4px);
+  opacity: 1;
 }
 
 /* SHOW */
