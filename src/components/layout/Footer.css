@@ -1,0 +1,160 @@
+.footer {
+  background: #0b1d2a;
+  color: #d1d5db;
+  padding: 50px 60px 20px;
+  font-size: 13px;
+}
+
+/* GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr 1.2fr;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+/* COLUMN TEXT */
+.footer-col p {
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+/* TITLE */
+.footer-title {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* GOLD LINE */
+.footer-title::before {
+  content: "";
+  width: 4px;
+  height: 16px;
+  background: #d4af37;
+  border-radius: 3px;
+}
+
+/* 🔥 FIX UTAMA: SAMAKAN ALIGNMENT */
+.footer-col ul {
+  list-style: none;
+  padding-left: 14px; /* sejajar dengan title (4px line + gap) */
+  margin: 0;
+}
+
+/* LIST */
+.footer-col ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-right: 120px;
+}
+
+.footer-col ul li:hover {
+  color: #d4af37;
+  opacity: 1;
+}
+
+/* CONTACT */
+.contact {
+  padding-left: 14px; /* 🔥 samakan juga */
+}
+
+.contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  display: flex;
+  margin-top: 12px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  background: #1c2f40;
+  color: white;
+  font-size: 12px;
+}
+
+.newsletter button {
+  padding: 0 14px;
+  border: none;
+  background: #d4af37;
+  color: black;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  opacity: 0.85;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links span {
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.footer-links span:hover {
+  color: #d4af37;
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

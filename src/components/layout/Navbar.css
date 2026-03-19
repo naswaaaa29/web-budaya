@@ -1,0 +1,222 @@
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 90px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(11, 29, 42, 0.55);
+  backdrop-filter: blur(14px);
+
+  color: white;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* SCROLL */
+.navbar.scrolled {
+  background: rgba(11, 29, 42, 0.95);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #d4af37;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.brand:hover {
+  opacity: 0.85;
+}
+
+/* CENTER LOGO */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #d4af37, #8c6a2b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+
+  transition: 0.3s;
+}
+
+.logo-circle:hover {
+  transform: scale(1.1);
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links li {
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  opacity: 1;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #f5d97a);
+  transition: 0.3s ease;
+}
+
+.nav-links li:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.nav-links .active {
+  opacity: 1;
+}
+
+/* DROPDOWN */
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+/* ARROW */
+.arrow {
+  font-size: 11px;
+  transition: 0.3s;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* BRIDGE */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: -10px; /* 🔥 geser dikit ke kanan */
+
+  margin-top: 6px;
+
+  width: 200px;
+  padding: 10px;
+
+  background: rgba(13, 31, 51, 0.95);
+  backdrop-filter: blur(16px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+/* SHOW */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ITEM */
+.dropdown-menu p {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s;
+  opacity: 0.85;
+}
+
+/* HOVER ITEM */
+.dropdown-menu p:hover {
+  background: rgba(212, 175, 55, 0.15);
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .logo-circle {
+    width: 45px;
+    height: 45px;
+  }
+}
